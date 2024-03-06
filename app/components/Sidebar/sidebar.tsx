@@ -5,6 +5,9 @@ import React, { useState } from 'react';
 import Logo from "@/public/assets/logo.png";
 import { Home, Search, LibraryBig, LogIn } from 'lucide-react';
 
+
+import Avatar from '@mui/material/Avatar';
+
 type ButtonName = 'home' | 'search' | 'library' | 'login';
 
 const Sidebar: React.FC = () => {
@@ -15,8 +18,9 @@ const Sidebar: React.FC = () => {
   };
 
   return (
-    <div className='text-white border border-gray-100 border-opacity-15 bg-[#141414] bg-opacity-5 rounded-xl p-5'>
-      <Image src={Logo} width={50} height={40} alt='logo' />
+    <div className='text-white h-[905px]	 border border-gray-100 border-opacity-20 bg-[#141414] bg-opacity-35 rounded-xl p-5'>
+      <Avatar src="https://mcusercontent.com/4d495ae0bbe9396d5b9e37d4a/images/a87ee1e9-bf51-e393-4b28-3682dae1bf2e.png" alt='logo' />
+
       <div className='flex items-center justify-center mt-8'>
         <ul className='flex flex-col items-center justify-between gap-8 self-center'>
           
@@ -30,7 +34,6 @@ const Sidebar: React.FC = () => {
             <Home />
           </button>
 
-         
           <button
             className={`cursor-pointer hover:bg-gray-200 hover:bg-opacity-15 p-3 rounded-full ${
               activeButton === 'search' ? 'bg-gray-200 bg-opacity-15' : ''
@@ -40,7 +43,6 @@ const Sidebar: React.FC = () => {
             <Search />
           </button>
 
-          
           <button
             className={`cursor-pointer hover:bg-gray-200 hover:bg-opacity-15 p-3 rounded-full ${
               activeButton === 'library' ? 'bg-gray-200 bg-opacity-15' : ''
@@ -50,7 +52,6 @@ const Sidebar: React.FC = () => {
             <LibraryBig />
           </button>
 
-          
           <button
             className={`cursor-pointer hover:bg-gray-200 hover:bg-opacity-15 p-3 rounded-full ${
               activeButton === 'login' ? 'bg-gray-200 bg-opacity-15' : ''

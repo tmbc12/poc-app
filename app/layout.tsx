@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
-      <div className="flex p-5 gap-8">
+      <div className="flex p-8 gap-5">
         <Sidebar />
         <div className={`flex-grow ${inter.className}`}>
           {children}
